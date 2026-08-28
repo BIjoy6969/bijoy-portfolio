@@ -14,7 +14,7 @@ export const profile = {
   email: "azmbodruddozabijoy@gmail.com",
   phone: "+880 1648 583672",
   github: "https://github.com/BIjoy6969",
-  linkedin: "https://www.linkedin.com/in/a-z-m-bodruddoza-bijoy",
+  linkedin: "https://www.linkedin.com/in/a-z-m-bodruddoza-bijoy-878409247/",
 
   // Hero positioning
   headline: {

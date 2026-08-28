@@ -76,7 +76,7 @@ export function Contact() {
 
   const links = [
     { Icon: Mail, cl: "Email", cv: profile.email, href: `mailto:${profile.email}`, copy: true },
-    { Icon: Linkedin, cl: "LinkedIn", cv: "a-z-m-bodruddoza-bijoy", href: profile.linkedin, copy: false },
+    { Icon: Linkedin, cl: "LinkedIn", cv: "a-z-m-bodruddoza-bijoy-878409247", href: profile.linkedin, copy: false },
     { Icon: Github, cl: "GitHub", cv: site.githubUsername, href: profile.github, copy: false },
   ];
 

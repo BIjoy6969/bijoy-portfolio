@@ -36,10 +36,10 @@ const AVAILABLE_COMMANDS: Record<string, string> = {
 };
 
 export function Hero() {
-  const [activeTab, setActiveTab] = useState<"terminal" | "portrait">("terminal");
+  const [activeTab, setActiveTab] = useState<"portrait" | "terminal">("portrait");
   const [inputVal, setInputVal] = useState("");
   const [history, setHistory] = useState(DEFAULT_HISTORY);
-  const [profileImgExists, setProfileImgExists] = useState(false);
+  const [profileImgExists, setProfileImgExists] = useState(true);
   const termEndRef = useRef<HTMLDivElement>(null);
 
   // Check if custom uploaded profile image exists

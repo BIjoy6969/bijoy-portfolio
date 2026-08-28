@@ -1,45 +1,63 @@
-export type SkillCategory = "lang" | "web" | "ml" | "db" | "cs";
+export type SkillCategory = "core" | "web" | "ml" | "tools" | "cs";
 
 export const skillCategories: { id: SkillCategory | "all"; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "lang", label: "Programming" },
+  { id: "all", label: "All Skills" },
+  { id: "core", label: "Core Languages" },
   { id: "web", label: "Web & Backend" },
   { id: "ml", label: "AI / ML & Data" },
-  { id: "db", label: "Databases & Tools" },
-  { id: "cs", label: "Core CS" },
+  { id: "tools", label: "Databases & Tools" },
+  { id: "cs", label: "Computer Science" },
 ];
 
-export const skills: { name: string; category: SkillCategory }[] = [
-  { name: "Python", category: "lang" },
-  { name: "JavaScript", category: "lang" },
-  { name: "C++", category: "lang" },
-  { name: "React", category: "web" },
-  { name: "Node.js", category: "web" },
-  { name: "Express.js", category: "web" },
-  { name: "FastAPI", category: "web" },
-  { name: "MERN Stack", category: "web" },
-  { name: "REST APIs", category: "web" },
-  { name: "TailwindCSS", category: "web" },
-  { name: "JWT Auth", category: "web" },
-  { name: "PyTorch", category: "ml" },
-  { name: "TensorFlow", category: "ml" },
-  { name: "Keras", category: "ml" },
-  { name: "Scikit-learn", category: "ml" },
-  { name: "Data Analysis", category: "ml" },
-  { name: "MongoDB", category: "db" },
-  { name: "MySQL", category: "db" },
-  { name: "SQLite", category: "db" },
-  { name: "Git", category: "db" },
-  { name: "GitHub", category: "db" },
-  { name: "PyOpenGL", category: "db" },
-  { name: "API Integration", category: "db" },
-  { name: "Data Structures", category: "cs" },
-  { name: "Algorithms", category: "cs" },
-  { name: "OOP", category: "cs" },
-  { name: "Database Systems", category: "cs" },
-  { name: "Operating Systems", category: "cs" },
-  { name: "Computer Networks", category: "cs" },
-  { name: "Computer Architecture", category: "cs" },
-  { name: "Computer Graphics", category: "cs" },
-  { name: "Software Engineering", category: "cs" },
+export type Skill = {
+  name: string;
+  category: SkillCategory;
+  level: "Core" | "Applied" | "Proficient" | "Foundational";
+  usedIn?: string[]; // Project slugs where this skill is demonstrated
+};
+
+export const skills: Skill[] = [
+  // Core Languages
+  { name: "JavaScript", category: "core", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "Python", category: "core", level: "Core", usedIn: ["fraud-detection", "3d-survival-shooter"] },
+  { name: "TypeScript", category: "core", level: "Proficient", usedIn: ["rentnest"] },
+  { name: "C++", category: "core", level: "Proficient", usedIn: [] },
+
+  // Web & Backend
+  { name: "React", category: "web", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "Node.js", category: "web", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "Express.js", category: "web", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "MERN Stack", category: "web", level: "Core", usedIn: ["rentnest"] },
+  { name: "REST APIs", category: "web", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "Tailwind CSS", category: "web", level: "Core", usedIn: ["travelmate"] },
+  { name: "JWT Auth", category: "web", level: "Core", usedIn: ["rentnest"] },
+  { name: "FastAPI", category: "web", level: "Applied", usedIn: [] },
+
+  // AI / ML & Data
+  { name: "PyTorch", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "TensorFlow", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "Scikit-learn", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "XGBoost", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "SHAP & LIME", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "SMOTE & PCA", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "Data Preprocessing", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+
+  // Databases & Tools
+  { name: "MongoDB", category: "tools", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "MySQL", category: "tools", level: "Proficient", usedIn: [] },
+  { name: "SQLite", category: "tools", level: "Proficient", usedIn: [] },
+  { name: "Git & GitHub", category: "tools", level: "Core", usedIn: ["rentnest", "fraud-detection", "travelmate", "3d-survival-shooter"] },
+  { name: "Postman", category: "tools", level: "Core", usedIn: ["rentnest", "travelmate"] },
+  { name: "PyOpenGL", category: "tools", level: "Applied", usedIn: ["3d-survival-shooter"] },
+  { name: "Linux / Shell", category: "tools", level: "Proficient", usedIn: [] },
+
+  // Core Computer Science
+  { name: "Data Structures", category: "cs", level: "Foundational", usedIn: ["3d-survival-shooter"] },
+  { name: "Algorithms", category: "cs", level: "Foundational", usedIn: ["3d-survival-shooter"] },
+  { name: "OOP (Object-Oriented)", category: "cs", level: "Foundational", usedIn: ["rentnest", "3d-survival-shooter"] },
+  { name: "Database Systems", category: "cs", level: "Foundational", usedIn: ["rentnest"] },
+  { name: "Operating Systems", category: "cs", level: "Foundational", usedIn: [] },
+  { name: "Computer Networks", category: "cs", level: "Foundational", usedIn: ["rentnest", "travelmate"] },
+  { name: "Computer Graphics", category: "cs", level: "Foundational", usedIn: ["3d-survival-shooter"] },
+  { name: "Software Engineering", category: "cs", level: "Foundational", usedIn: ["rentnest", "travelmate"] },
 ];

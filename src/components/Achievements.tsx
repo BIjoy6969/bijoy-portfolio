@@ -1,28 +1,49 @@
-import { Trophy, Medal, Award } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { achievements } from "@/data/achievements";
+import { achievements, Achievement } from "@/data/achievements";
+import { Trophy, Medal, Award, Users } from "lucide-react";
 
-const ICONS = { trophy: Trophy, medal: Medal, award: Award } as const;
+const ICON_MAP = {
+  trophy: Trophy,
+  medal: Medal,
+  award: Award,
+  users: Users,
+};
 
 export function Achievements() {
   return (
-    <section className="section" id="achievements">
+    <section className="section achievements-section" id="achievements">
       <div className="wrap">
         <Reveal className="section-head">
           <span className="eyebrow">§ 06 — Recognition</span>
-          <h2>Achievements.</h2>
+          <h2>Validated achievements &amp; milestones.</h2>
+          <p className="section-sub">
+            Competitive programming placements, leadership outcomes, and international awards.
+          </p>
         </Reveal>
-        <div className="ach-grid">
-          {achievements.map((a, i) => {
-            const Icon = ICONS[a.icon as keyof typeof ICONS];
+
+        <div className="ach-grid-v2">
+          {achievements.map((ach, idx) => {
+            const Icon = ICON_MAP[ach.icon] || Trophy;
+
             return (
-              <Reveal key={a.title} delay={i * 0.06}>
-                <div className="ach">
-                  <span className="ic"><Icon size={20} /></span>
-                  <div className="big">{a.big}<span>{a.suffix}</span></div>
-                  <h3>{a.title}</h3>
-                  <p>{a.body}</p>
-                </div>
+              <Reveal key={ach.title} delay={idx * 0.08}>
+                <article className="ach-card-v2">
+                  <div className="ach-card-top">
+                    <span className="ach-cat">{ach.category}</span>
+                    <span className="ach-icon-circle">
+                      <Icon size={18} />
+                    </span>
+                  </div>
+
+                  <div className="ach-big-num">
+                    <span className="num-val">{ach.big}</span>
+                    {ach.suffix && <span className="num-suf">{ach.suffix}</span>}
+                  </div>
+
+                  <h3 className="ach-title-v2">{ach.title}</h3>
+                  <div className="ach-subtitle-v2">{ach.subtitle}</div>
+                  <p className="ach-body-v2">{ach.body}</p>
+                </article>
               </Reveal>
             );
           })}

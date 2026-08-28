@@ -1,16 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { Menu, X, Command, ArrowDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { CommandPalette } from "./CommandPalette";
 import { profile } from "@/data/profile";
 import { site } from "@/data/site";
 
 const LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skills", label: "Skills" },
+  { id: "what-i-do", label: "What I Do" },
   { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
+  { id: "journey", label: "Journey" },
+  { id: "skills", label: "Skills" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -20,19 +23,21 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
     const io = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
-      { rootMargin: "-45% 0px -50% 0px" }
+      { rootMargin: "-35% 0px -50% 0px" }
     );
+
     LINKS.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) io.observe(el);
     });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       io.disconnect();
@@ -45,49 +50,111 @@ export function Navbar() {
 
   const go = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
     setOpen(false);
   };
 
   return (
     <>
       <header className={`nav ${scrolled ? "scrolled" : ""}`}>
-        <nav className="nav-inner" aria-label="Primary">
-          <a className="brand" href="#home" onClick={go("home")} aria-label={`Home — ${profile.name}`}>
-            <span className="mk">{profile.initials}</span>
-            <span>{profile.shortName}</span>
+        <nav className="nav-inner" aria-label="Primary Navigation">
+          {/* AZM/B Brand Mark */}
+          <a
+            className="brand"
+            href="#home"
+            onClick={go("home")}
+            aria-label={`Home — ${profile.name}`}
+          >
+            <span className="mk">{profile.brandMark}</span>
+            <span className="brand-name">{profile.shortName}</span>
           </a>
+
+          {/* Center Links */}
           <div className="nav-links">
             {LINKS.map(({ id, label }) => (
-              <a key={id} href={`#${id}`} onClick={go(id)} className={active === id ? "active" : ""}>
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={go(id)}
+                className={active === id ? "active" : ""}
+              >
                 {label}
               </a>
             ))}
           </div>
+
+          {/* Right Action Bar */}
           <div className="nav-cta">
+            <CommandPalette />
             <ThemeToggle />
-            <a className="btn btn--ghost" href={site.resumePath} download>Résumé</a>
-            <a className="btn btn--primary" href="#contact" onClick={go("contact")}>Let&apos;s talk</a>
-            <button className="burger" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen(true)}>
-              <Menu size={18} />
+            <a
+              className="btn btn--ghost nav-cv-btn"
+              href={site.resumePath}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <span>CV</span>
+              <ArrowDown size={13} />
+            </a>
+            <a
+              className="btn btn--primary nav-talk-btn"
+              href="#contact"
+              onClick={go("contact")}
+            >
+              Let&apos;s talk
+            </a>
+            <button
+              className="burger"
+              aria-label="Open mobile menu"
+              aria-expanded={open}
+              onClick={() => setOpen(true)}
+            >
+              <Menu size={19} />
             </button>
           </div>
         </nav>
       </header>
 
-      <div className={`mobile-panel ${open ? "open" : ""}`}>
-        {LINKS.filter((l) => l.id !== "home").map(({ id, label }, i) => (
-          <a key={id} href={`#${id}`} onClick={go(id)}>
-            {label}
-            <span className="mono">{String(i + 1).padStart(2, "0")}</span>
+      {/* Mobile Drawer */}
+      <div className={`mobile-panel ${open ? "open" : ""}`} role="dialog" aria-modal="true">
+        <div className="mobile-header-bar">
+          <div className="brand">
+            <span className="mk">{profile.brandMark}</span>
+            <span>{profile.shortName}</span>
+          </div>
+          <button
+            className="mobile-close"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="mobile-nav-list">
+          {LINKS.map(({ id, label }, i) => (
+            <a key={id} href={`#${id}`} onClick={go(id)}>
+              <span>{label}</span>
+              <span className="mono">0{i + 1}</span>
+            </a>
+          ))}
+        </div>
+
+        <div className="mobile-footer-actions">
+          <a
+            className="btn btn--primary"
+            style={{ width: "100%", justifyContent: "center" }}
+            href={site.resumePath}
+            download
+          >
+            Download Résumé (PDF)
           </a>
-        ))}
+        </div>
       </div>
-      {open && (
-        <button className="mobile-close" aria-label="Close menu" onClick={() => setOpen(false)}>
-          <X size={20} />
-        </button>
-      )}
     </>
   );
 }

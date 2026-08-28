@@ -6,23 +6,27 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: site.title,
+  title: `${profile.name} — ${profile.role}`,
   description: site.description,
   keywords: [...site.keywords],
   authors: [{ name: profile.name }],
   creator: profile.name,
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: site.url,
-    title: site.title,
+    title: `${profile.name} — ${profile.role}`,
     description: site.description,
-    siteName: profile.name,
+    siteName: `${profile.name} (AZM/B)`,
     images: [{ url: site.ogImage, width: 1200, height: 630, alt: profile.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: site.title,
+    title: `${profile.name} — ${profile.role}`,
     description: site.description,
     images: [site.ogImage],
   },
@@ -36,19 +40,24 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
+  alternateName: "Bijoy",
   jobTitle: profile.role,
   email: `mailto:${profile.email}`,
   url: site.url,
   address: { "@type": "PostalAddress", addressLocality: "Dhaka", addressCountry: "Bangladesh" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "BRAC University" },
   sameAs: [profile.github, profile.linkedin],
+  knowsAbout: [
+    "Full-Stack Web Development",
+    "MERN Stack",
+    "Applied Machine Learning",
+    "Deep Learning",
+    "Explainable AI",
+    "Computer Graphics",
+    "REST APIs",
+  ],
 };
 
-/**
- * Fonts load via <link> (Google Fonts) rather than next/font so the app builds
- * without a build-time network fetch. Families are declared as CSS variables in
- * globals.css. To self-host instead, swap this for next/font/google.
- */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" data-theme="dark">
@@ -56,14 +65,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
           rel="stylesheet"
         />
         <script dangerouslySetInnerHTML={{ __html: noFlash }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        <a className="skip" href="#main">Skip to content</a>
+        <a className="skip" href="#main">
+          Skip to content
+        </a>
         {children}
         <Cursor />
       </body>

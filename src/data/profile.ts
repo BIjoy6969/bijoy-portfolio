@@ -1,29 +1,75 @@
 export const profile = {
   name: "A Z M Bodruddoza Bijoy",
   shortName: "Bijoy",
-  initials: "BB",
-  role: "Computer Science Engineer & Full-Stack Developer",
+  brandMark: "AZM/B",
+  initials: "AZM/B",
+  role: "Full-Stack Developer · Applied ML Enthusiast",
+  subRole: "Computer Science & Engineering · BRAC University",
   location: "Dhaka, Bangladesh",
-  status: "Open to software & ML opportunities",
+  status: "Available for Opportunities",
+  availability: "Full-time & Internship Roles",
+  university: "BRAC University",
+  degree: "B.Sc. in Computer Science and Engineering",
 
   email: "azmbodruddozabijoy@gmail.com",
   phone: "+880 1648 583672",
   github: "https://github.com/BIjoy6969",
   linkedin: "https://www.linkedin.com/in/a-z-m-bodruddoza-bijoy",
 
-  // Hero — the accentWord renders in the italic serif accent face.
-  headline: { pre: "Full-stack engineer building", accentWord: "intelligent,", post: "scalable software." },
+  // Hero positioning
+  headline: {
+    statement: "Building software where engineering meets intelligence.",
+    pre: "Full-Stack Engineer building",
+    accentWord: "intelligent,",
+    post: "scalable software.",
+  },
   lede:
-    "Computer Science undergraduate at BRAC University. I ship production-grade web apps with the MERN stack and build applied ML with PyTorch — from REST APIs and secure auth to real-time systems.",
+    "Computer Science undergraduate at BRAC University. I engineer production-grade full-stack web applications with the MERN stack and research applied machine learning models — from robust REST APIs and distributed architecture to real-time interactive systems.",
 
-  // About — three editorial blocks.
+  // Personal story
   about: {
-    lead: "A Computer Science undergraduate who builds across the whole stack — turning ambiguous problems into scalable, maintainable systems, from the database schema to the interface.",
+    lead:
+      "A Computer Science undergraduate with a dual focus on full-stack web architecture and applied machine learning. I enjoy bridging the gap between reliable backend systems, clean user experiences, and data-driven intelligence.",
     blocks: [
-      { no: "01", title: "Who I am", body: "CSE undergraduate at BRAC University with a strong software-engineering foundation and hands-on experience across full-stack development and applied machine learning." },
-      { no: "02", title: "What I build", body: "Full-stack MERN applications, RESTful APIs, secure JWT authentication, well-modelled databases and third-party API integrations — plus applied ML with PyTorch and TensorFlow, and even a real-time 3D game engine." },
-      { no: "03", title: "How I think", body: "Analytical and systems-minded. I care about clean architecture, edge cases and cross-functional collaboration — the same instinct that let me coordinate events for a 300+ member university club." },
+      {
+        no: "01",
+        title: "Who I Am",
+        body:
+          "Computer Science & Engineering undergraduate at BRAC University. Driven by curiosity for systems design, competitive programming, and practical AI applications that solve real-world problems.",
+      },
+      {
+        no: "02",
+        title: "What I Build",
+        body:
+          "Full-stack MERN platforms with role-based access control, RESTful microservices, and database models — alongside deep learning pipelines with PyTorch, fraud detection research, and real-time 3D graphics.",
+      },
+      {
+        no: "03",
+        title: "How I Think",
+        body:
+          "Systems-first and analytical. I prioritize clean code architecture, defensive error handling, testable APIs, and pragmatic cross-functional collaboration honed through leading 300+ member university initiatives.",
+      },
+    ],
+    exploring: [
+      {
+        topic: "Applied Machine Learning",
+        detail: "Deep neural networks, fraud detection, threshold optimization & SMOTE for extreme class imbalance.",
+      },
+      {
+        topic: "Explainable AI (XAI)",
+        detail: "SHAP and LIME interpretability frameworks to make complex models transparent and auditable.",
+      },
+      {
+        topic: "Full-Stack Architecture",
+        detail: "Scalable MERN services, relational schema design, JWT security, and real-time data flows.",
+      },
+      {
+        topic: "System Design & Computing",
+        detail: "High-performance compute, real-time render loops with PyOpenGL, and clean API orchestration.",
+      },
     ],
   },
-  footerTag: "Computer Science engineer building intelligent, scalable software. Dhaka, Bangladesh.",
+
+  footerTag:
+    "Engineering software where full-stack reliability meets applied intelligence. Based in Dhaka, Bangladesh.",
 } as const;

@@ -28,7 +28,7 @@ export function About() {
               <div className="about-portrait-card">
                 <div className="about-portrait-wrap">
                   <Image
-                    src="/profile/about.webp"
+                    src="/profile/about.jpg"
                     alt={`${profile.name} — About Portrait`}
                     width={540}
                     height={720}

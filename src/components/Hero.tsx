@@ -39,21 +39,7 @@ export function Hero() {
   const [activeTab, setActiveTab] = useState<"portrait" | "terminal">("portrait");
   const [inputVal, setInputVal] = useState("");
   const [history, setHistory] = useState(DEFAULT_HISTORY);
-  const [profileImgExists, setProfileImgExists] = useState(true);
   const termEndRef = useRef<HTMLDivElement>(null);
-
-  // Check if custom uploaded profile image exists
-  useEffect(() => {
-    const img = new window.Image();
-    img.src = "/profile/profile.webp";
-    img.onload = () => setProfileImgExists(true);
-    img.onerror = () => {
-      const imgJpg = new window.Image();
-      imgJpg.src = "/profile/profile.jpg";
-      imgJpg.onload = () => setProfileImgExists(true);
-      imgJpg.onerror = () => setProfileImgExists(false);
-    };
-  }, []);
 
   const handleCommand = (cmdStr: string) => {
     const clean = cmdStr.trim().toLowerCase();
@@ -286,33 +272,17 @@ export function Hero() {
             {activeTab === "portrait" && (
               <div className="hero-portrait-card">
                 <div className="portrait-frame">
-                  {profileImgExists ? (
-                    <div className="portrait-img-wrap">
-                      <Image
-                        src="/profile/profile.webp"
-                        alt={profile.name}
-                        width={480}
-                        height={580}
-                        quality={95}
-                        className="portrait-img"
-                        priority
-                      />
-                    </div>
-                  ) : (
-                    <div className="portrait-placeholder">
-                      <div className="portrait-monogram-circle">
-                        <span className="portrait-monogram">{profile.brandMark}</span>
-                      </div>
-                      <div className="portrait-decor-lines">
-                        <span />
-                        <span />
-                        <span />
-                      </div>
-                      <p className="portrait-placeholder-hint">
-                        Drop your portrait in <code>public/profile/profile.webp</code>
-                      </p>
-                    </div>
-                  )}
+                  <div className="portrait-img-wrap">
+                    <Image
+                      src="/profile/profile.jpg"
+                      alt={profile.name}
+                      width={480}
+                      height={580}
+                      quality={95}
+                      className="portrait-img"
+                      priority
+                    />
+                  </div>
 
                   <div className="portrait-overlay-meta">
                     <div className="pom-name">{profile.name}</div>

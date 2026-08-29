@@ -32,7 +32,7 @@ export function About() {
                     alt={`${profile.name} — About Portrait`}
                     width={540}
                     height={720}
-                    quality={95}
+                    unoptimized
                     className="about-portrait-img"
                     priority
                   />

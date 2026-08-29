@@ -278,7 +278,7 @@ export function Hero() {
                       alt={profile.name}
                       width={480}
                       height={580}
-                      quality={95}
+                      unoptimized
                       className="portrait-img"
                       priority
                     />

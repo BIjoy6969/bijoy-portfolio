@@ -292,8 +292,8 @@ h1, h2, h3, h4 { font-family: var(--font-display), sans-serif; font-weight: 600;
 .about-lead { font-family: var(--font-display), sans-serif; font-weight: 500; font-size: clamp(20px, 2.3vw, 28px); line-height: 1.35; letter-spacing: -0.01em; margin: 0; }
 .about-portrait-card { position: relative; border: 1px solid var(--border-2); border-radius: var(--radius); background: var(--surface); padding: 12px; box-shadow: var(--shadow-sm); transition: 0.3s var(--ease); }
 .about-portrait-card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
-.about-portrait-wrap { position: relative; width: 100%; aspect-ratio: 4/5; max-height: 440px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); }
-.about-portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; transition: transform 0.4s var(--ease); }
+.about-portrait-wrap { position: relative; width: 100%; aspect-ratio: 3/4; max-height: 520px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); }
+.about-portrait-img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 8%; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; transition: transform 0.4s var(--ease); }
 .about-portrait-card:hover .about-portrait-img { transform: scale(1.02); }
 .about-portrait-badge { position: absolute; bottom: 12px; left: 12px; right: 12px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; background: color-mix(in srgb, var(--bg) 85%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid var(--border-2); font-family: var(--font-mono), monospace; font-size: 11px; color: var(--text); }
 .apb-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }

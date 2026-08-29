@@ -30,8 +30,9 @@ export function About() {
                   <Image
                     src="/profile/about.webp"
                     alt={`${profile.name} — About Portrait`}
-                    width={480}
-                    height={600}
+                    width={540}
+                    height={720}
+                    quality={95}
                     className="about-portrait-img"
                     priority
                   />

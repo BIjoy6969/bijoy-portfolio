@@ -291,8 +291,9 @@ export function Hero() {
                       <Image
                         src="/profile/profile.webp"
                         alt={profile.name}
-                        width={400}
-                        height={480}
+                        width={480}
+                        height={580}
+                        quality={95}
                         className="portrait-img"
                         priority
                       />

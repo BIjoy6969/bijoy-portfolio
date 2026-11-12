@@ -92,13 +92,6 @@ export function Navbar() {
           <div className="nav-cta">
             <CommandPalette />
             <ThemeToggle />
-            <a
-              className="btn btn--primary nav-talk-btn"
-              href="#contact"
-              onClick={go("contact")}
-            >
-              Let&apos;s talk
-            </a>
             <button
               className="burger"
               aria-label="Open mobile menu"
@@ -112,41 +105,32 @@ export function Navbar() {
       </header>
 
       {/* Mobile Drawer */}
-      <div className={`mobile-panel ${open ? "open" : ""}`} role="dialog" aria-modal="true">
-        <div className="mobile-header-bar">
-          <div className="brand">
-            <span className="mk">{profile.brandMark}</span>
-            <span>{profile.shortName}</span>
+      {open && (
+        <div className="mobile-panel open" role="dialog" aria-modal="true">
+          <div className="mobile-header-bar">
+            <div className="brand">
+              <span className="mk">{profile.brandMark}</span>
+              <span>{profile.shortName}</span>
+            </div>
+            <button
+              className="mobile-close"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+            >
+              <X size={20} />
+            </button>
           </div>
-          <button
-            className="mobile-close"
-            aria-label="Close menu"
-            onClick={() => setOpen(false)}
-          >
-            <X size={20} />
-          </button>
-        </div>
 
-        <div className="mobile-nav-list">
-          {LINKS.map(({ id, label }, i) => (
-            <a key={id} href={`#${id}`} onClick={go(id)}>
-              <span>{label}</span>
-              <span className="mono">0{i + 1}</span>
-            </a>
-          ))}
+          <div className="mobile-nav-list">
+            {LINKS.map(({ id, label }, i) => (
+              <a key={id} href={`#${id}`} onClick={go(id)}>
+                <span>{label}</span>
+                <span className="mono">0{i + 1}</span>
+              </a>
+            ))}
+          </div>
         </div>
-
-        <div className="mobile-footer-actions">
-          <a
-            className="btn btn--primary"
-            style={{ width: "100%", justifyContent: "center" }}
-            href="#contact"
-            onClick={go("contact")}
-          >
-            Let&apos;s talk
-          </a>
-        </div>
-      </div>
+      )}
     </>
   );
 }

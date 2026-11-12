@@ -1,4 +1,4 @@
-export type ProjectCategory = "all" | "fullstack" | "ml" | "systems" | "graphics";
+export type ProjectCategory = "all" | "fullstack" | "graphics";
 
 export type Project = {
   slug: string;
@@ -32,8 +32,6 @@ export type Project = {
 export const projectCategories: { id: ProjectCategory; label: string }[] = [
   { id: "all", label: "All Projects" },
   { id: "fullstack", label: "Full-Stack" },
-  { id: "ml", label: "AI / ML & Research" },
-  { id: "systems", label: "Systems" },
   { id: "graphics", label: "Graphics" },
 ];
 
@@ -49,8 +47,8 @@ export const projects: Project[] = [
     description:
       "A full-stack house and apartment rental platform covering the complete listing-to-booking lifecycle, featuring granular role-based access control for tenants, landlords, and administrators.",
     tech: ["React", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "Tailwind CSS"],
-    github: "https://github.com/BIjoy6969",
-    demo: "",
+    github: "https://github.com/BIjoy6969/RentNest---House-Apartment-Rental-System",
+    demo: "https://rent-nest-house-apartment-rental-sy.vercel.app/",
     stats: [
       { label: "Architecture", value: "MVC Pattern" },
       { label: "Auth", value: "JWT + RBAC" },
@@ -84,62 +82,8 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "fraud-detection",
-    index: "02",
-    featured: true,
-    isResearch: true,
-    category: "ml",
-    tag: "Thesis / Research · Deep Learning & XAI",
-    name: "Credit Card Fraud Detection & XAI",
-    headline: "Explainable deep learning research on extreme class-imbalanced financial transactions.",
-    description:
-      "Undergraduate thesis research utilizing deep learning and XGBoost with SMOTE and PCA for fraud classification, featuring precision-recall threshold optimization and Explainable AI (SHAP & LIME) for transparent decision auditing.",
-    tech: ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "LIME", "SMOTE", "PCA"],
-    github: "https://github.com/BIjoy6969",
-    demo: "",
-    stats: [
-      { label: "Focus", value: "Class Imbalance" },
-      { label: "Explainability", value: "SHAP & LIME" },
-      { label: "Optimization", value: "PR-Threshold" },
-    ],
-    caseStudy: {
-      overview:
-        "An applied machine learning research thesis investigating credit card fraud detection in highly imbalanced transactional datasets. The research compares Deep Neural Networks (DNN) against gradient-boosted ensembles (XGBoost), addresses extreme data skew with SMOTE and PCA, optimizes classification thresholds for financial risk, and integrates SHAP and LIME for transparent model explainability.",
-      problem:
-        "Fraudulent transactions typically account for less than 0.2% of total volume. Standard classifiers trained on such extreme class imbalance suffer from high false-negative rates, and complex deep models operate as black boxes, preventing compliance audits and root-cause explanations.",
-      goal:
-        "Build a robust fraud classification pipeline that maximizes recall and precision on rare fraud events while providing interpretable explanations for why any transaction was flagged.",
-      solution:
-        "Constructed an end-to-end pipeline: data preprocessing and scaling → SMOTE oversampling of the minority class → PCA dimensionality exploration → Deep Neural Network & XGBoost model training → Precision-Recall curve threshold optimization → Global and Local explainability via SHAP values and LIME surrogate models.",
-      architecture:
-        "Raw Transaction Stream → Preprocessing & Feature Normalization → SMOTE Synthetic Resampling → PyTorch DNN / XGBoost Classifier → Custom Threshold Calibrator (optimal F1/Recall) → SHAP Tree/Kernel Explainer + LIME Local Explanations → Auditable Output Report.",
-      features: [
-        "Advanced preprocessing and feature scaling on multi-dimensional transaction data",
-        "Synthetic Minority Over-sampling Technique (SMOTE) balancing rare fraud patterns",
-        "Deep Neural Network (DNN) architectures implemented in PyTorch and TensorFlow",
-        "XGBoost gradient boosting classifier with hyperparameter tuning",
-        "Precision-Recall threshold calibration tailored to minimize financial risk loss",
-        "SHAP (SHapley Additive exPlanations) for global feature importance and interaction values",
-        "LIME (Local Interpretable Model-agnostic Explanations) for individual transaction transparency",
-      ],
-      challenges:
-        "Preventing synthetic oversampling from introducing unrealistic variance into the decision space, and balancing computational overhead when calculating Shapley values across thousands of features.",
-      implementation:
-        "Applied SMOTE strictly to training folds to eliminate data leakage. Optimized classification thresholds using cross-validated Precision-Recall curves rather than default 0.5 probability cuts. Deployed TreeSHAP for accelerated explainability calculation on tree models.",
-      outcome:
-        "A rigorous academic research project demonstrating deep knowledge of machine learning methodologies, statistical evaluation on imbalanced data, and modern Explainable AI standards.",
-      pipeline: [
-        { step: "01", title: "Data Ingestion & PCA", desc: "Normalized PCA-transformed transaction features to handle privacy-safe continuous distributions." },
-        { step: "02", title: "SMOTE Resampling", desc: "Synthesized minority class samples to prevent majority-class bias without duplicate overfitting." },
-        { step: "03", title: "Deep Learning & XGBoost", desc: "Trained multi-layer PyTorch neural nets and gradient-boosted decision trees with early stopping." },
-        { step: "04", title: "Threshold Tuning", desc: "Calibrated decision boundaries against PR curves to maximize fraud detection while controlling false alerts." },
-        { step: "05", title: "XAI Transparency", desc: "Generated SHAP summary plots and local LIME explanations identifying top predictive signals." },
-      ],
-    },
-  },
-  {
     slug: "travelmate",
-    index: "03",
+    index: "02",
     featured: true,
     category: "fullstack",
     tag: "Full-Stack · API Orchestration",
@@ -148,8 +92,8 @@ export const projects: Project[] = [
     description:
       "A full-stack travel planning platform consolidating itinerary creation, live weather forecasts, flight data, currency conversion, and budget tracking into an integrated dashboard with downloadable PDF reports.",
     tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Google Maps API", "OpenWeather API", "REST APIs"],
-    github: "https://github.com/BIjoy6969",
-    demo: "",
+    github: "https://github.com/BIjoy6969/travelmate-1",
+    demo: "https://travelmate-three.vercel.app/",
     stats: [
       { label: "APIs", value: "4+ Services" },
       { label: "Export", value: "PDF Itinerary" },
@@ -183,7 +127,7 @@ export const projects: Project[] = [
   },
   {
     slug: "3d-survival-shooter",
-    index: "04",
+    index: "03",
     featured: true,
     category: "graphics",
     tag: "Systems · Computer Graphics",
@@ -192,7 +136,7 @@ export const projects: Project[] = [
     description:
       "A custom-built real-time 3D game engine implementing core graphics rendering loops, coordinate transformations, enemy AI state machines, dynamic difficulty scaling, and spatial collision physics.",
     tech: ["Python", "PyOpenGL", "Computer Graphics", "Game AI", "Linear Algebra"],
-    github: "https://github.com/BIjoy6969",
+    github: "https://github.com/BIjoy6969/3D_Survival_Shooter",
     demo: "",
     stats: [
       { label: "Framerate", value: "Target 60 FPS" },
@@ -234,7 +178,7 @@ export const moreWork = [
     category: "Full-Stack",
     description: "Stateless JWT authentication template with refresh token rotation, password hashing, and declarative permission middleware.",
     tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Bcrypt"],
-    github: "https://github.com/BIjoy6969",
+    github: "https://github.com/BIjoy6969/rentnest-backend",
   },
   {
     title: "Exploratory Data Analysis & Classifier Suite",

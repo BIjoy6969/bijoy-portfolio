@@ -72,7 +72,7 @@ export function About() {
           <Reveal delay={0.1}>
             <div className="exploring-header">
               <span className="eyebrow">
-                <Compass size={13} /> Current Focus &amp; Research
+                <Compass size={13} /> Current Focus &amp; Exploration
               </span>
               <h3>What I am currently exploring</h3>
             </div>

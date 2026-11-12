@@ -2,7 +2,7 @@
 // GLOBAL SITE CONFIG — the few switches you'll touch most often.
 // -----------------------------------------------------------------------------
 export const site = {
-  url: "https://example.com", // <-- set to your deployed domain (used for SEO/OG/sitemap)
+  url: "https://azmbijoyportfolio.netlify.app",
   title:
     "A Z M Bodruddoza Bijoy — Computer Science Engineer & Full-Stack Developer",
   description:

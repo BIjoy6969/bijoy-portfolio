@@ -224,7 +224,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     <span>View Repository</span>
                   </a>
                 )}
-                {p.demo ? (
+                {p.demo && (
                   <a
                     className="btn btn--primary"
                     href={p.demo}
@@ -234,10 +234,6 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                     <span>Launch Live Demo</span>
                     <ArrowUpRight size={15} />
                   </a>
-                ) : (
-                  <span className="btn btn--ghost" style={{ opacity: 0.6, pointerEvents: "none" }}>
-                    Live Demo — Staging URL
-                  </span>
                 )}
               </div>
             </div>

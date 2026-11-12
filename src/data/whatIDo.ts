@@ -27,13 +27,13 @@ export const whatIDoData: WhatIDoItem[] = [
     title: "Applied Machine Learning",
     headline: "Data-driven intelligence and predictive deep learning pipelines.",
     description:
-      "Developing machine learning models for real-world classification, anomaly detection, and fraud mitigation. Implementing threshold optimization and Explainable AI (XAI) to ensure models are reliable and interpretable.",
-    technologies: ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "SHAP", "LIME", "SMOTE"],
+      "Developing machine learning models for classification, predictive analytics, and intelligent automation. Building reproducible training and evaluation workflows from data preprocessing to deployment.",
+    technologies: ["Python", "PyTorch", "TensorFlow", "Keras", "Scikit-learn", "Data Analysis"],
     capabilities: [
-      "Extreme imbalanced data handling",
-      "Deep neural networks & XGBoost tuning",
-      "Precision-Recall threshold calibration",
-      "Model interpretability (SHAP / LIME)",
+      "Feature engineering & data preprocessing",
+      "Neural network training & evaluation",
+      "Supervised classification & regression",
+      "Model benchmarking & workflow automation",
     ],
   },
   {

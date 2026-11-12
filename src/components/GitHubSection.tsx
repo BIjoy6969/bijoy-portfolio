@@ -19,36 +19,36 @@ type GitHubRepo = {
 const FALLBACK_REPOS: Partial<GitHubRepo>[] = [
   {
     id: 1,
-    name: "RentNest",
+    name: "RentNest---House-Apartment-Rental-System",
     description: "MERN stack house & apartment rental platform with role-based JWT auth.",
-    html_url: "https://github.com/BIjoy6969",
+    html_url: "https://github.com/BIjoy6969/RentNest---House-Apartment-Rental-System",
     language: "JavaScript",
     stargazers_count: 0,
     forks_count: 0,
   },
   {
     id: 2,
-    name: "credit-card-fraud-detection-xai",
-    description: "Deep learning thesis research on imbalanced transaction data with SMOTE and SHAP.",
-    html_url: "https://github.com/BIjoy6969",
-    language: "Python",
+    name: "rentnest-backend",
+    description: "Express & MongoDB REST API backend for RentNest rental marketplace.",
+    html_url: "https://github.com/BIjoy6969/rentnest-backend",
+    language: "JavaScript",
     stargazers_count: 0,
     forks_count: 0,
   },
   {
     id: 3,
-    name: "TravelMate",
-    description: "Smart travel planner orchestrating weather, flights, currency, and map APIs.",
-    html_url: "https://github.com/BIjoy6969",
+    name: "travelmate-1",
+    description: "Smart AI travel planner orchestrating weather, flights, currency, and map APIs.",
+    html_url: "https://github.com/BIjoy6969/travelmate-1",
     language: "JavaScript",
     stargazers_count: 0,
     forks_count: 0,
   },
   {
     id: 4,
-    name: "3d-survival-shooter-pyopengl",
+    name: "3D_Survival_Shooter",
     description: "Real-time 3D game engine and survival shooter written in Python with PyOpenGL.",
-    html_url: "https://github.com/BIjoy6969",
+    html_url: "https://github.com/BIjoy6969/3D_Survival_Shooter",
     language: "Python",
     stargazers_count: 0,
     forks_count: 0,
@@ -107,10 +107,10 @@ export function GitHubSection() {
         <Reveal className="section-head">
           <span className="eyebrow">§ 07 — Open Source</span>
           <h2>Where I build in the open.</h2>
-          <p className="section-sub">
-            Direct repositories, full-stack microservices, and applied research code.
-          </p>
-        </Reveal>
+            <p className="section-sub">
+              Direct repositories, full-stack platforms, and interactive graphics systems.
+            </p>
+          </Reveal>
 
         <div className="gh-grid-v2">
           {/* GitHub Profile Card */}
@@ -133,7 +133,7 @@ export function GitHubSection() {
             </div>
 
             <p className="gh-bio">
-              Software engineering, MERN full-stack platforms, PyTorch deep learning research, and 3D computer graphics in Python.
+              Software engineering, MERN full-stack platforms, applied machine learning, and 3D computer graphics in Python.
             </p>
 
             <div className="gh-metrics-row">

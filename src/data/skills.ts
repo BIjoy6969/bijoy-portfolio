@@ -19,7 +19,7 @@ export type Skill = {
 export const skills: Skill[] = [
   // Core Languages
   { name: "JavaScript", category: "core", level: "Core", usedIn: ["rentnest", "travelmate"] },
-  { name: "Python", category: "core", level: "Core", usedIn: ["fraud-detection", "3d-survival-shooter"] },
+  { name: "Python", category: "core", level: "Core", usedIn: ["3d-survival-shooter"] },
   { name: "TypeScript", category: "core", level: "Proficient", usedIn: ["rentnest"] },
   { name: "C++", category: "core", level: "Proficient", usedIn: [] },
 
@@ -34,19 +34,17 @@ export const skills: Skill[] = [
   { name: "FastAPI", category: "web", level: "Applied", usedIn: [] },
 
   // AI / ML & Data
-  { name: "PyTorch", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "TensorFlow", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "Scikit-learn", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "XGBoost", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "SHAP & LIME", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "SMOTE & PCA", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
-  { name: "Data Preprocessing", category: "ml", level: "Applied", usedIn: ["fraud-detection"] },
+  { name: "PyTorch", category: "ml", level: "Applied", usedIn: [] },
+  { name: "TensorFlow", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Keras", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Scikit-learn", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Data Analysis", category: "ml", level: "Applied", usedIn: [] },
 
   // Databases & Tools
   { name: "MongoDB", category: "tools", level: "Core", usedIn: ["rentnest", "travelmate"] },
   { name: "MySQL", category: "tools", level: "Proficient", usedIn: [] },
   { name: "SQLite", category: "tools", level: "Proficient", usedIn: [] },
-  { name: "Git & GitHub", category: "tools", level: "Core", usedIn: ["rentnest", "fraud-detection", "travelmate", "3d-survival-shooter"] },
+  { name: "Git & GitHub", category: "tools", level: "Core", usedIn: ["rentnest", "travelmate", "3d-survival-shooter"] },
   { name: "Postman", category: "tools", level: "Core", usedIn: ["rentnest", "travelmate"] },
   { name: "PyOpenGL", category: "tools", level: "Applied", usedIn: ["3d-survival-shooter"] },
   { name: "Linux / Shell", category: "tools", level: "Proficient", usedIn: [] },

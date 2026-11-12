@@ -84,7 +84,7 @@ export function CommandPalette() {
       category: "Navigation",
       icon: FolderGit2,
       label: "Selected Projects",
-      sublabel: "RentNest, Fraud Detection, TravelMate, 3D Engine",
+      sublabel: "RentNest, TravelMate, 3D Survival Shooter",
       action: () => scrollTo("projects"),
     },
     {
@@ -92,7 +92,7 @@ export function CommandPalette() {
       category: "Navigation",
       icon: Milestone,
       label: "My Journey (Timeline)",
-      sublabel: "Academic, research & leadership milestones",
+      sublabel: "Academic, project & leadership milestones",
       action: () => scrollTo("journey"),
     },
     {

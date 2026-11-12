@@ -41,7 +41,7 @@ export const profile = {
         no: "02",
         title: "What I Build",
         body:
-          "Full-stack MERN platforms with role-based access control, RESTful microservices, and database models — alongside deep learning pipelines with PyTorch, fraud detection research, and real-time 3D graphics.",
+          "Full-stack MERN platforms with role-based access control, RESTful microservices, and database models — alongside applied machine learning pipelines with PyTorch and real-time 3D graphics.",
       },
       {
         no: "03",
@@ -53,11 +53,11 @@ export const profile = {
     exploring: [
       {
         topic: "Applied Machine Learning",
-        detail: "Deep neural networks, fraud detection, threshold optimization & SMOTE for extreme class imbalance.",
+        detail: "Deep neural networks, predictive classification pipelines, and data-driven workflows with PyTorch and Scikit-learn.",
       },
       {
-        topic: "Explainable AI (XAI)",
-        detail: "SHAP and LIME interpretability frameworks to make complex models transparent and auditable.",
+        topic: "AI-Powered Web Apps",
+        detail: "Integrating generative AI, third-party API orchestration, and intelligent automation into interactive full-stack products.",
       },
       {
         topic: "Full-Stack Architecture",

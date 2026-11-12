@@ -20,7 +20,7 @@ const CATEGORY_ICONS: Record<string, any> = {
 };
 
 export function Journey() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "research" | "leadership" | "education">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "leadership" | "education">("all");
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
 
   const filteredTimeline = journeyTimeline.filter((item) => {
@@ -39,7 +39,7 @@ export function Journey() {
             <span className="eyebrow">§ 04 — Trajectory</span>
             <h2>My Journey &amp; Milestones</h2>
             <p className="section-sub">
-              Chronological progression across software research, university leadership, and engineering foundations.
+              Chronological progression across full-stack engineering, university leadership, and academic milestones.
             </p>
           </Reveal>
 
@@ -55,16 +55,6 @@ export function Journey() {
                 }}
               >
                 All Milestones
-              </button>
-              <button
-                type="button"
-                className={`filter-pill ${activeFilter === "research" ? "active" : ""}`}
-                onClick={() => {
-                  setActiveFilter("research");
-                  setSelectedYear(null);
-                }}
-              >
-                Research
               </button>
               <button
                 type="button"

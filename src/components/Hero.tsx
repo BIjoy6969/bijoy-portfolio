@@ -28,7 +28,7 @@ const AVAILABLE_COMMANDS: Record<string, string> = {
   whoami: "A Z M Bodruddoza Bijoy — CSE undergraduate at BRAC University, building intelligent full-stack systems.",
   focus: "Full-Stack Web (MERN, REST APIs, RBAC) + Applied ML (PyTorch, XGBoost, Explainable AI).",
   status: "🟢 Available for full-time software engineering roles and internships.",
-  projects: "Featured: 01-RentNest (MERN), 02-Fraud Detection (Deep Learning/XAI), 03-TravelMate (APIs), 04-3D Survival Shooter (PyOpenGL).",
+  projects: "Featured: 01-RentNest (MERN), 02-TravelMate (APIs & AI), 03-3D Survival Shooter (PyOpenGL).",
   skills: "React, Node.js, Express, MongoDB, Python, PyTorch, TensorFlow, Scikit-learn, C++, TypeScript, Git, Postman.",
   contact: "Email: azmbodruddozabijoy@gmail.com | LinkedIn: /in/a-z-m-bodruddoza-bijoy",
   university: "BRAC University — B.Sc. in Computer Science and Engineering (Dhaka, Bangladesh).",
@@ -155,7 +155,7 @@ export function Hero() {
 
               <div className="hero-stats-inline">
                 <div className="hero-stat-pill">
-                  <b>04</b> <span>Featured Projects</span>
+                  <b>03</b> <span>Featured Projects</span>
                 </div>
                 <div className="hero-stat-pill">
                   <b>200+</b> <span>Problems Solved</span>
@@ -257,8 +257,8 @@ export function Hero() {
                     <span className="tf-lbl">Core Stack</span>
                   </div>
                   <div>
-                    <span className="tf-val">2026</span>
-                    <span className="tf-lbl">Thesis Focus</span>
+                    <span className="tf-val">B.Sc. CSE</span>
+                    <span className="tf-lbl">BRAC University</span>
                   </div>
                   <div>
                     <span className="tf-val">Dhaka, BD</span>

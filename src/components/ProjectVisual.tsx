@@ -1,8 +1,5 @@
-import { FraudResearchVisual } from "./FraudResearchVisual";
-
 export function ProjectVisual({ slug }: { slug: string }) {
   if (slug === "rentnest") return <RentNestVisual />;
-  if (slug === "fraud-detection") return <FraudResearchVisual />;
   if (slug === "travelmate") return <TravelMateVisual />;
   if (slug === "3d-survival-shooter") return <ShooterVisual />;
   return null;

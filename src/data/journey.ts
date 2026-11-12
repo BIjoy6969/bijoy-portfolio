@@ -102,21 +102,4 @@ export const journeyTimeline: JourneyItem[] = [
       "Engineered responsive UI systems with React and Tailwind CSS.",
     ],
   },
-  {
-    year: "2026",
-    category: "research",
-    tag: "Undergraduate Thesis",
-    badge: "Current Focus",
-    title: "Credit Card Fraud Detection & XAI",
-    subtitle: "Thesis Research · Deep Learning & Explainable AI",
-    period: "Jan 2026 — Present",
-    location: "BRAC University",
-    description:
-      "Conducting undergraduate thesis research on extreme class-imbalanced transactional data using PyTorch, XGBoost, SMOTE, and PCA, with SHAP and LIME frameworks for model explainability and compliance auditing.",
-    highlights: [
-      "Engineered machine learning pipelines for extreme imbalance (fraud < 0.2%).",
-      "Calibrated decision thresholds against Precision-Recall curves to minimize false negatives.",
-      "Integrated SHAP & LIME interpretability for transparent risk attribution.",
-    ],
-  },
 ];

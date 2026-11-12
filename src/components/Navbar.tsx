@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Command, ArrowDown } from "lucide-react";
+import { Menu, X, Command } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { CommandPalette } from "./CommandPalette";
 import { profile } from "@/data/profile";
@@ -93,16 +93,6 @@ export function Navbar() {
             <CommandPalette />
             <ThemeToggle />
             <a
-              className="btn btn--ghost nav-cv-btn"
-              href={site.resumePath}
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-            >
-              <span>CV</span>
-              <ArrowDown size={13} />
-            </a>
-            <a
               className="btn btn--primary nav-talk-btn"
               href="#contact"
               onClick={go("contact")}
@@ -150,10 +140,10 @@ export function Navbar() {
           <a
             className="btn btn--primary"
             style={{ width: "100%", justifyContent: "center" }}
-            href={site.resumePath}
-            download
+            href="#contact"
+            onClick={go("contact")}
           >
-            Download Résumé (PDF)
+            Let&apos;s talk
           </a>
         </div>
       </div>

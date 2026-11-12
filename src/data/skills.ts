@@ -34,6 +34,10 @@ export const skills: Skill[] = [
   { name: "FastAPI", category: "web", level: "Applied", usedIn: [] },
 
   // AI / ML & Data
+  { name: "Data Sourcing", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Data Collection", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Data Preprocessing", category: "ml", level: "Applied", usedIn: [] },
+  { name: "Data Cleaning", category: "ml", level: "Applied", usedIn: [] },
   { name: "PyTorch", category: "ml", level: "Applied", usedIn: [] },
   { name: "TensorFlow", category: "ml", level: "Applied", usedIn: [] },
   { name: "Keras", category: "ml", level: "Applied", usedIn: [] },

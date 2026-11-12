@@ -1,6 +1,6 @@
 export type JourneyItem = {
   year: string;
-  category: "research" | "leadership" | "education" | "project";
+  category: "experience" | "leadership" | "education" | "project";
   tag: string;
   title: string;
   subtitle: string;
@@ -100,6 +100,23 @@ export const journeyTimeline: JourneyItem[] = [
       "Orchestrated 4+ third-party REST APIs asynchronously.",
       "Implemented client-side PDF document generation for offline itineraries.",
       "Engineered responsive UI systems with React and Tailwind CSS.",
+    ],
+  },
+  {
+    year: "2026",
+    category: "experience",
+    tag: "Industry Experience",
+    badge: "Current",
+    title: "Data Engineer Intern — Data Team",
+    subtitle: "Potaka.ai Limited",
+    period: "Present",
+    location: "Dhaka, Bangladesh",
+    description:
+      "Working within the Data Team at Potaka.ai Limited to build reliable data preparation workflows—executing multi-source data sourcing, structured collection, preprocessing, and rigorous cleaning for downstream analytics and AI pipelines.",
+    highlights: [
+      "Spearheaded structured data sourcing and ingestion across heterogeneous external and internal sources.",
+      "Built reproducible preprocessing, schema validation, deduplication, and normalization workflows.",
+      "Partnered with engineering and AI/ML teammates to enforce dataset integrity and pipeline readiness.",
     ],
   },
 ];

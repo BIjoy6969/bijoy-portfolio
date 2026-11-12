@@ -3,10 +3,10 @@ export const profile = {
   shortName: "Bijoy",
   brandMark: "AZM/B",
   initials: "AZM/B",
-  role: "Full-Stack Developer · Applied ML Enthusiast",
+  role: "Full-Stack Developer · Data Engineer Intern",
   subRole: "Computer Science & Engineering · BRAC University",
   location: "Dhaka, Bangladesh",
-  status: "Available for Opportunities",
+  status: "Data Engineer Intern @ Potaka.ai Limited",
   availability: "Full-time & Internship Roles",
   university: "BRAC University",
   degree: "B.Sc. in Computer Science and Engineering",
@@ -19,29 +19,29 @@ export const profile = {
   // Hero positioning
   headline: {
     statement: "Building software where engineering meets intelligence.",
-    pre: "Full-Stack Engineer building",
+    pre: "Full-Stack & Data Engineer building",
     accentWord: "intelligent,",
     post: "scalable software.",
   },
   lede:
-    "Computer Science undergraduate at BRAC University. I engineer production-grade full-stack web applications with the MERN stack and research applied machine learning models — from robust REST APIs and distributed architecture to real-time interactive systems.",
+    "Computer Science undergraduate at BRAC University and Data Engineer Intern at Potaka.ai Limited. I engineer full-stack MERN applications and build end-to-end data sourcing, collection, preprocessing, and cleaning pipelines for production AI systems.",
 
   // Personal story
   about: {
     lead:
-      "A Computer Science undergraduate with a dual focus on full-stack web architecture and applied machine learning. I enjoy bridging the gap between reliable backend systems, clean user experiences, and data-driven intelligence.",
+      "A Computer Science undergraduate with hands-on experience across full-stack web architecture and data engineering. I enjoy bridging the gap between reliable backend systems, clean data pipelines, and seamless user experiences.",
     blocks: [
       {
         no: "01",
         title: "Who I Am",
         body:
-          "Computer Science & Engineering undergraduate at BRAC University. Driven by curiosity for systems design, competitive programming, and practical AI applications that solve real-world problems.",
+          "Computer Science & Engineering undergraduate at BRAC University and Data Team member at Potaka.ai Limited. Driven by curiosity for systems design, data pipelines, and competitive programming.",
       },
       {
         no: "02",
         title: "What I Build",
         body:
-          "Full-stack MERN platforms with role-based access control, RESTful microservices, and database models — alongside applied machine learning pipelines with PyTorch and real-time 3D graphics.",
+          "Full-stack MERN platforms with role-based access control and RESTful APIs — alongside structured data sourcing, collection, preprocessing, and cleaning workflows and real-time 3D graphics.",
       },
       {
         no: "03",

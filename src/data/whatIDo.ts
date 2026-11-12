@@ -24,16 +24,16 @@ export const whatIDoData: WhatIDoItem[] = [
   },
   {
     index: "02",
-    title: "Applied Machine Learning",
-    headline: "Data-driven intelligence and predictive deep learning pipelines.",
+    title: "Data Engineering & Applied ML",
+    headline: "Clean, reliable data pipelines and predictive machine learning workflows.",
     description:
-      "Developing machine learning models for classification, predictive analytics, and intelligent automation. Building reproducible training and evaluation workflows from data preprocessing to deployment.",
-    technologies: ["Python", "PyTorch", "TensorFlow", "Keras", "Scikit-learn", "Data Analysis"],
+      "Designing end-to-end data sourcing, collection, preprocessing, and cleaning pipelines for AI workflows, alongside developing and evaluating machine learning models.",
+    technologies: ["Python", "Data Sourcing", "Data Cleaning", "Preprocessing", "PyTorch", "TensorFlow", "Scikit-learn"],
     capabilities: [
-      "Feature engineering & data preprocessing",
-      "Neural network training & evaluation",
-      "Supervised classification & regression",
-      "Model benchmarking & workflow automation",
+      "Multi-source data sourcing & collection",
+      "Automated data preprocessing & cleaning",
+      "Schema consistency & data quality checks",
+      "Model training & workflow automation",
     ],
   },
   {

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Reveal } from "./Reveal";
 import { journeyTimeline, JourneyItem } from "@/data/journey";
 import {
-  BrainCircuit,
+  Briefcase,
   Users,
   GraduationCap,
   Sparkles,
@@ -13,14 +13,14 @@ import {
 } from "lucide-react";
 
 const CATEGORY_ICONS: Record<string, any> = {
-  research: BrainCircuit,
+  experience: Briefcase,
   leadership: Users,
   education: GraduationCap,
   project: Sparkles,
 };
 
 export function Journey() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "leadership" | "education">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "experience" | "leadership" | "education">("all");
   const [selectedYear, setSelectedYear] = useState<string | null>(null);
 
   const filteredTimeline = journeyTimeline.filter((item) => {
@@ -39,7 +39,7 @@ export function Journey() {
             <span className="eyebrow">§ 04 — Trajectory</span>
             <h2>My Journey &amp; Milestones</h2>
             <p className="section-sub">
-              Chronological progression across full-stack engineering, university leadership, and academic milestones.
+              Chronological progression across industry experience, full-stack engineering, university leadership, and academic milestones.
             </p>
           </Reveal>
 
@@ -55,6 +55,16 @@ export function Journey() {
                 }}
               >
                 All Milestones
+              </button>
+              <button
+                type="button"
+                className={`filter-pill ${activeFilter === "experience" ? "active" : ""}`}
+                onClick={() => {
+                  setActiveFilter("experience");
+                  setSelectedYear(null);
+                }}
+              >
+                Experience
               </button>
               <button
                 type="button"

@@ -19,15 +19,15 @@ import { profile } from "@/data/profile";
 import { site } from "@/data/site";
 
 const DEFAULT_HISTORY = [
-  { cmd: "whoami", out: "A Z M Bodruddoza Bijoy — Full-Stack Developer & Applied ML Enthusiast" },
-  { cmd: "focus", out: "MERN Stack · PyTorch Deep Learning · System Architecture · REST APIs" },
-  { cmd: "status", out: "AVAILABLE — Open to Software Engineering & AI/ML opportunities" },
+  { cmd: "whoami", out: "A Z M Bodruddoza Bijoy — Full-Stack Developer & Data Engineer Intern" },
+  { cmd: "focus", out: "Data Pipelines (Sourcing, Cleaning) · MERN Stack · Applied ML · REST APIs" },
+  { cmd: "status", out: "Data Engineer Intern @ Potaka.ai Limited — Open to Full-Stack & Data/ML roles" },
 ];
 
 const AVAILABLE_COMMANDS: Record<string, string> = {
-  whoami: "A Z M Bodruddoza Bijoy — CSE undergraduate at BRAC University, building intelligent full-stack systems.",
-  focus: "Full-Stack Web (MERN, REST APIs, RBAC) + Applied ML (PyTorch, XGBoost, Explainable AI).",
-  status: "🟢 Available for full-time software engineering roles and internships.",
+  whoami: "A Z M Bodruddoza Bijoy — CSE undergraduate at BRAC University & Data Engineer Intern at Potaka.ai Limited.",
+  focus: "Data Engineering (Sourcing, Collection, Preprocessing, Cleaning) + Full-Stack MERN + Applied ML.",
+  status: "🟢 Data Engineer Intern @ Potaka.ai Limited · Open to Software, Data & AI/ML opportunities.",
   projects: "Featured: 01-RentNest (MERN), 02-TravelMate (APIs & AI), 03-3D Survival Shooter (PyOpenGL).",
   skills: "React, Node.js, Express, MongoDB, Python, PyTorch, TensorFlow, Scikit-learn, C++, TypeScript, Git, Postman.",
   contact: "Email: azmbodruddozabijoy@gmail.com | LinkedIn: /in/a-z-m-bodruddoza-bijoy",
@@ -286,7 +286,7 @@ export function Hero() {
 
                   <div className="portrait-overlay-meta">
                     <div className="pom-name">{profile.name}</div>
-                    <div className="pom-sub">Full-Stack Developer · Applied ML</div>
+                    <div className="pom-sub">Full-Stack Developer · Data Engineer Intern</div>
                     <div className="pom-inst">BRAC University · CSE</div>
                   </div>
                 </div>

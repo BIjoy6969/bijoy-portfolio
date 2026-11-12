@@ -4,12 +4,12 @@
 export const site = {
   url: "https://azmbijoyportfolio.netlify.app",
   title:
-    "A Z M Bodruddoza Bijoy — Computer Science Engineer & Full-Stack Developer",
+    "A Z M Bodruddoza Bijoy — Full-Stack & Data Engineer",
   description:
-    "Computer Science engineer building intelligent, scalable software — full-stack MERN applications, REST APIs and applied machine learning. Based in Dhaka, Bangladesh.",
+    "Computer Science undergraduate and Data Engineer Intern at Potaka.ai Limited building scalable full-stack MERN systems, data pipelines, and applied machine learning. Based in Dhaka, Bangladesh.",
   keywords: [
-    "A Z M Bodruddoza Bijoy", "Full-Stack Developer", "Software Engineer",
-    "MERN", "React", "Node.js", "Machine Learning", "PyTorch", "BRAC University", "Dhaka",
+    "A Z M Bodruddoza Bijoy", "Full-Stack Developer", "Data Engineer", "Software Engineer",
+    "MERN", "React", "Node.js", "Data Pipelines", "Potaka.ai Limited", "BRAC University", "Dhaka",
   ],
   ogImage: "/og.png", // add an og.png to /public for rich social previews
 

@@ -684,3 +684,32 @@ h1, h2, h3, h4 { font-family: var(--font-display), sans-serif; font-weight: 600;
     transition-duration: 0.001ms !important;
   }
 }
+
+/* EXPERIENCE SECTION */
+.exp-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 36px; }
+.exp-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 28px; transition: transform 0.25s var(--ease), border-color 0.25s var(--ease); }
+.exp-card:hover { border-color: var(--border-2); transform: translateY(-2px); }
+.exp-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
+.exp-badge-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.exp-type-badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono), monospace; font-size: 11px; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+.exp-type-badge.industry { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent-text); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.exp-type-badge.leadership { background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); }
+.exp-status-live { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono), monospace; font-size: 11px; color: #3dd68c; background: rgba(61, 214, 140, 0.1); border: 1px solid rgba(61, 214, 140, 0.3); padding: 4px 10px; border-radius: 999px; }
+.exp-role { font-size: clamp(20px, 2.4vw, 24px); font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.exp-company-row { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--accent-text); }
+.exp-dept { color: var(--muted); font-size: 14px; }
+.exp-header-right { display: flex; gap: 10px; flex-wrap: wrap; }
+.exp-meta-pill { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono), monospace; font-size: 12px; color: var(--muted); background: var(--surface-2); padding: 6px 12px; border-radius: 6px; border: 1px solid var(--border); }
+.exp-desc { font-size: 15px; color: var(--text-2); line-height: 1.6; margin-bottom: 18px; }
+.exp-bullets { list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; flex-direction: column; gap: 10px; }
+.exp-bullets li { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; color: var(--text); line-height: 1.55; }
+.exp-bullets .bullet-icon { color: var(--accent); flex-shrink: 0; margin-top: 3px; }
+.exp-skills-wrap { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 14px; border-top: 1px solid var(--border); }
+.exp-skill-chip { font-family: var(--font-mono), monospace; font-size: 11.5px; padding: 4px 10px; border-radius: 4px; background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border); }
+
+/* LIVE GITHUB CADENCE */
+.live-cadence-badge { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; }
+.gh-cadence-link { color: var(--accent-text); text-decoration: none; font-weight: 600; }
+.gh-cadence-link:hover { text-decoration: underline; }
+.gh-live-chart-wrap { width: 100%; overflow-x: auto; padding: 14px 0 4px 0; }
+.gh-live-chart-img { width: 100%; max-width: 100%; height: auto; display: block; filter: contrast(1.05); }

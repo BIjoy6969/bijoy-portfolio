@@ -10,10 +10,12 @@ import { site } from "@/data/site";
 const LINKS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "what-i-do", label: "What I Do" },
+  { id: "experience", label: "Experience" },
+  { id: "what-i-do", label: "Capabilities" },
   { id: "projects", label: "Projects" },
   { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
+  { id: "github", label: "GitHub" },
   { id: "contact", label: "Contact" },
 ];
 

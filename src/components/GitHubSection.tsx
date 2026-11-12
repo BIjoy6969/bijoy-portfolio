@@ -213,26 +213,29 @@ export function GitHubSection() {
               })}
             </div>
 
-            {/* Contribution Heatmap strip */}
+            {/* Live GitHub Contribution Heatmap */}
             <Reveal delay={0.15}>
               <div className="gh-activity-panel">
                 <div className="gap-cap">
-                  <span>Weekly Contribution Cadence</span>
-                  <span>github.com/{site.githubUsername}</span>
+                  <span className="live-cadence-badge">
+                    <span className="live-dot" /> Live GitHub Contribution Cadence
+                  </span>
+                  <a
+                    href={`https://github.com/${site.githubUsername}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gh-cadence-link"
+                  >
+                    @{site.githubUsername} ↗
+                  </a>
                 </div>
-                <div className="heat-grid" aria-hidden="true">
-                  {Array.from({ length: 26 * 7 }).map((_, i) => (
-                    <i
-                      key={i}
-                      className={
-                        i % 5 === 0 || i % 7 === 0 || i % 11 === 0
-                          ? i % 11 === 0
-                            ? "heat-lvl-3"
-                            : "heat-lvl-2"
-                          : "heat-lvl-1"
-                      }
-                    />
-                  ))}
+                <div className="gh-live-chart-wrap">
+                  <img
+                    src={`https://ghchart.rshah.org/f3b23c/${site.githubUsername}`}
+                    alt={`${profile.name}'s Live GitHub Contributions`}
+                    className="gh-live-chart-img"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </Reveal>
